@@ -4,7 +4,7 @@ const fetch = require("node-fetch")
 describe("update user", () => {
     it("pacth update user", async () => {
         const response = await fetch("https://reqres.in/api/users/2", {
-            method: "patch",
+            method: "PACTH",
             headers: {
                 "x-api-key": "reqres-free-v1",
                 "Content-Type": "application/json",
@@ -19,4 +19,5 @@ describe("update user", () => {
         expect(response.status).to.equal(200);
         expect(data.name).to.include("reskhi");
     });
+
 });
